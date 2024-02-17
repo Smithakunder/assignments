@@ -1,4 +1,4 @@
-// middleware/validationMiddleware.js
+
 const validateAuthorId = (req, res, next) => {
     const authorId = parseInt(req.params.authorId);
     if (!Number.isNaN(authorId)) {
