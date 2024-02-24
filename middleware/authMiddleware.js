@@ -1,13 +1,10 @@
+// middleware/authMiddleware.js
+const authMiddleware = (req, res, next) => {
+  // Authentication logic here
+  // For simplicity, let's assume there's no authentication required for now
+  next();
+};
 
-const authorize = (req, res, next) => {
-    
-    const isLoggedIn = true; 
-    if (isLoggedIn) {
-      next(); 
-    } else {
-      res.status(401).json({ message: "Unauthorized" });
-    }
-  };
-  
-  module.exports = { authorize };
+module.exports = authMiddleware;
+
   

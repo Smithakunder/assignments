@@ -1,12 +1,8 @@
+// middleware/validationMiddleware.js
+const validationMiddleware = (req, res, next) => {
+  // Validation logic here
+  // For simplicity, let's assume there's no validation required for now
+  next();
+};
 
-const validateAuthorId = (req, res, next) => {
-    const authorId = parseInt(req.params.authorId);
-    if (!Number.isNaN(authorId)) {
-      next();
-    } else {
-      res.status(400).json({ message: "Invalid author ID" });
-    }
-  };
-  
-  module.exports = { validateAuthorId };
-  
+module.exports = validationMiddleware;
